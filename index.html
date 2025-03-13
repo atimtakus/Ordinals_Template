@@ -13,7 +13,20 @@
     <script src="https://ordinals.com/content/a1ec09dc51decc47d805d321870dbf2bbdb0b595e3302c35db88a38c3dfecd5ci0"></script> 
    <script>
 
-
+      // THIS PART IS FOR TESTING ONLY -------------------------------------------------------------------------------------------------
+      // !!! REMOVE BEFORE INSCRIBING !!!
+      // 
+      // You can test it locally by adding ?seed= to your local URL to work on the same seed
+      // e.g. http://127.0.0.1/?seed=5fgpm3a1klpwqm662enrsssu8tkhwcmwsqqwqadi3jead3gdyaiqeqb42rkel8oj
+      // Otherwise seed will change after every refresh.
+      let alphabet = "0123456789abcdefghijklmnopqrstuvwsyz";
+      let inscription_id = new URLSearchParams(window.location.search).get("seed") || Array(64).fill(0).map(_ => alphabet[(Math.random() * alphabet.length) | 0]).join('');
+      // TESTING END --------------------------------------------------------------------------------------------------
+        
+      //__________UNCOMMENT BELOW BEFORE INSCRIBING____________________
+      //let inscription_id = window.location.pathname.split("/").pop();
+      //_________UMCOMMENT ABOVE BEFORE INSCRIBING______________________
+   
    
    </script>
     <script type="module" src="/src/main.js"></script>
