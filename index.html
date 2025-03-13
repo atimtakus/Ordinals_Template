@@ -14,8 +14,6 @@
    <script>
 
       // THIS PART IS FOR TESTING ONLY 
-      // !!! REMOVE BEFORE INSCRIBING !!!
-      // 
       // You can test it locally by adding ?seed= to your local URL to work on the same seed
       // e.g. http://127.0.0.1/?seed=5fgpm3a1klpwqm662enrsssu8tkhwcmwsqqwqadi3jead3gdyaiqeqb42rkel8oj
       // Otherwise seed will change after every refresh.
@@ -23,9 +21,7 @@
       let inscription_id = new URLSearchParams(window.location.search).get("seed") || Array(64).fill(0).map(_ => alphabet[(Math.random() * alphabet.length) | 0]).join('');
       // TESTING END 
         
-      //__________UNCOMMENT BELOW BEFORE INSCRIBING____________________
       //let inscription_id = window.location.pathname.split("/").pop();
-      //_________UMCOMMENT ABOVE BEFORE INSCRIBING______________________
    
    
    </script>
