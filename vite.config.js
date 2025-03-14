@@ -22,8 +22,8 @@ const cleanHTML = () => {
   };
 };
 
-export default defineConfig({
-  plugins: [viteSingleFile(), cleanHTML()],
+export default defineConfig(({ command }) => ({
+  plugins: command === "build" ? [viteSingleFile(), cleanHTML()] : [viteSingleFile()],
   build: {
     target: "esnext",
     polyfillModulePreload: false,
@@ -33,4 +33,6 @@ export default defineConfig({
       },
     },
   },
-});
+}));
+
+
