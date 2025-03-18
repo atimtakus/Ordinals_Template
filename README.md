@@ -2,7 +2,12 @@ Generative Art Template for Ordinals Ecosystem
 ==============================================
 This template uses vite bundler and singlefile plugin to build into single html file.
 
-Clone this repo to start!
+How to Start?
+
+git clone https://github.com/atimtakus/Ordinals_Template myAwesomeGenArt
+cd myAwesomeGenArt
+npm install
+npm run dev
 
 Code your awesome art!
 
